@@ -1,11 +1,12 @@
 body {
-  
-  div.container3 {
-   height: 10em;
-   position: relative }              /* 1 */
-div.container3 p {
-   margin: 100px;
-   position: absolute;               /* 2 */
-   top: 50%;                         /* 3 */
-  
- }
+    background:#fff
+}
+
+.container {
+    max-width:800px;
+    margin:20px auto;
+    background:#fff;
+    padding-bottom: 25px;
+    border-style:solid none;
+    border-width:1px;
+}
