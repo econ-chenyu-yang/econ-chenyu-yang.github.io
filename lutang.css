@@ -23,7 +23,7 @@ body {
   background:#eec no-repeat left bottom;
   margin:15px 0px 40px 0px;
   padding:0px 0px 10px 0px;
-  color:#333;   /* main text #333 */
+  color:#FFFFFF;   /* main text #333 */
   font-size:110%;
   line-height:1.5em;
   list-style-type: none;
@@ -34,7 +34,7 @@ body {
   background:#eec no-repeat left bottom;
   margin:15px 0 0;
   padding:0 0 10px;
-  color:#333;
+  color:#FFFFFF;
   font-size:97%;
   line-height:1.5em;
   list-style-type: none;
