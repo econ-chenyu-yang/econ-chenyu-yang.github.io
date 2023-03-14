@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+	}
+
+
+.main{
+	
+	height:100vh;
+	padding-left: 45vh;
+	padding-right: 45vh;
+}
+
+
+
+/* Navbar*/ 
+.navbar{
+		
+	display:flex;
+	
+	justify-content: center;
+	
+	align-items: content;
+	
+	background-color: darkgray;
+		
+	position: sticky;
+	
+	top:0;
+}
+
+.navbar ul{
+	display: flex;
+	
+	list-style: none;
+	
+	margin: 20px 0px;
+}
+
+.navbar ul li{
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: whitesmoke;
+	padding: 8px 25px;
+	transition: all .2s ease;
+}
+
+.navbar ul li a:hover{
+	background-color: grey;
+	box-shadow: 0 0 10px white;		
+}
+
+.row{
+	display: flex;
+	height: 25%;
+	aligh-items: center;
+}
+
+.col{
+	flex-basis: 50%	
+}
+
+.col p{
+	line-height: 25px;
+	
+}
+
+
+
+
+
