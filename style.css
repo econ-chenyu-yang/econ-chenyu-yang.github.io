@@ -115,3 +115,40 @@ footer {
   font-size: .9rem;
   color: #777;
 }
+
+/* -------------------------------------------
+   Responsive tweaks for mobile screens
+-------------------------------------------- */
+@media (max-width: 600px) {
+
+  /* Stack navbar items vertically if needed */
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar li {
+    margin: 8px 0;
+  }
+
+  /* Hero: stack photo and text */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .profile-photo {
+    margin: 0 auto 15px;
+    width: 120px;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-text h3 {
+    font-size: 1rem;
+    margin: 4px 0;
+  }
+  
+  /* Narrow container padding */
+  .container {
+    padding: 15px;
+  }
+}
