@@ -1,6 +1,6 @@
-/* -------------------------------------------
-   style.css — base styles, colors, fonts
--------------------------------------------- */
+/* ===========================================
+   Base styles, colors, fonts, and responsive
+   =========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
@@ -14,59 +14,72 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
+a { text-decoration: none; }
+
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  background-color: var(--page-bg);
+  background: var(--page-bg);
 }
 
+/* ------------------------------
+   Navbar (identical on both pages)
+   ------------------------------ */
 .navbar {
   position: sticky;
   top: 0;
+  width: 100%;
   background: var(--nav-bg);
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
 }
+
 .navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 60px;              /* fix the height */
 }
+
 .navbar li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
+
 .navbar a {
-  text-decoration: none;
   color: var(--nav-text);
   font-weight: 500;
+  line-height: 60px;         /* vertically center text */
   transition: color .3s;
+  padding: 0 5px;
 }
+
 .navbar a:hover,
 .navbar a.active {
   color: var(--primary);
 }
 
+/* ---------------------
+   Hero Section
+   --------------------- */
 .hero {
   display: flex;
   align-items: center;
   margin: 40px 0;
 }
+
 .profile-photo {
   width: 166px;
   height: auto;
@@ -74,19 +87,25 @@ body {
   margin-right: 30px;
   object-fit: cover;
 }
+
 .hero-text h1 {
-  margin: 0;
   font-size: 2.5rem;
-}
-.hero-text h3 {
-  margin: 8px 0;
-  font-weight: 400;
-  color: var(--primary);
+  margin-bottom: 10px;
 }
 
+.hero-text h3 {
+  color: var(--primary);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+/* ---------------------
+   Sections
+   --------------------- */
 section {
   margin: 40px 0;
 }
+
 section h2 {
   font-size: 1.75rem;
   border-bottom: 2px solid var(--primary);
@@ -96,19 +115,23 @@ section h2 {
 
 section ul {
   list-style: none;
-  padding: 0;
 }
+
 section li {
   margin-bottom: 10px;
 }
+
 section a {
   color: var(--primary);
-  text-decoration: none;
 }
+
 section a:hover {
   text-decoration: underline;
 }
 
+/* ---------------------
+   Footer
+   --------------------- */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -116,27 +139,25 @@ footer {
   color: #777;
 }
 
-/* -------------------------------------------
-   Responsive tweaks for mobile screens
--------------------------------------------- */
+/* ---------------------
+   Mobile (≤600px)
+   --------------------- */
 @media (max-width: 600px) {
-
-  /* Stack navbar items vertically if needed */
   .navbar ul {
     flex-direction: column;
+    height: auto;          /* let it grow */
   }
-  .navbar li {
-    margin: 8px 0;
+  .navbar a {
+    line-height: normal;
+    padding: 10px 0;
   }
 
-  /* Hero: stack photo and text */
   .hero {
     flex-direction: column;
     text-align: center;
-    margin: 20px 0;
   }
   .profile-photo {
-    margin: 0 auto 15px;
+    margin: 0 0 15px;
     width: 120px;
   }
   .hero-text h1 {
@@ -144,10 +165,7 @@ footer {
   }
   .hero-text h3 {
     font-size: 1rem;
-    margin: 4px 0;
   }
-  
-  /* Narrow container padding */
   .container {
     padding: 15px;
   }
