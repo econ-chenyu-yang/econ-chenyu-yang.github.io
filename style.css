@@ -3,6 +3,14 @@
    =========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+html {
+  /* always show (or at least reserve space for) the vertical scrollbar */
+  overflow-y: scroll;
+  
+  /* (optional, in supporting browsers) ensure stable gutter on both edges */
+  scrollbar-gutter: stable both-edges;
+}
+
 :root {
   --bg-color: #f8f8f8;
   --page-bg: #ffffff;
