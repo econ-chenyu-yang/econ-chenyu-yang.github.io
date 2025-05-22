@@ -3,6 +3,15 @@
    =========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+/* always reserve the vertical scrollbar gutter so page width never changes */
+html {
+  /* ensures the scrollbar track is always present */
+  overflow-y: scroll;
+
+  /* in browsers that support it, also stabilize the gutter on both edges */
+  scrollbar-gutter: stable both-edges;
+}
+
 html {
   /* always show (or at least reserve space for) the vertical scrollbar */
   overflow-y: scroll;
